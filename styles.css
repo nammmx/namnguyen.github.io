@@ -181,6 +181,15 @@ hr {
 
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    background: #E8E8E8;
+    height: 80px;
+  }
+
+  .navbar__container {
+    background: #E8E8E8;
+  }
+
   .navbar__toggle .bar {
     width: 20px;
     height: 3px;
@@ -193,6 +202,7 @@ hr {
   #navbar__logo {
     padding-left: 25px;
     font-size: 1.4rem;
+    background: #E8E8E8;
   }
 
   .navbar__links {
@@ -271,7 +281,7 @@ hr {
 
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 50px 0 75px 0;
+    padding: 75px 0 75px 0;
   }
 
   .hero__heading {
