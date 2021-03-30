@@ -10,40 +10,73 @@ const mobileMenu = () => {
 
 menu.addEventListener("click", mobileMenu);
 
-// Show active menu when scrolling
-const highlightMenu = () => {
-  const elem = document.querySelector(".highlight");
-  const homeMenu = document.querySelector("#home-page");
-  const aboutMenu = document.querySelector("#about-page");
-  const workMenu = document.querySelector("#work-page");
-  let scrollPos = window.scrollY;
-  
 
-  // adds highlight class to my menu items
-  //CHECK CONSOLE FOR RIGHT NUMBERS: uncomment following code in order to log to console to check numbers
-  //console.log(scrollPos); 
-  if(window.innerWidth > 1100 && scrollPos < 600) {
-    homeMenu.classList.add("highlight");
-    workMenu.classList.remove("highlight");
-    return
-  } else if (window.innerWidth > 1100 && scrollPos < 1850) {
-    workMenu.classList.add("highlight");
-    homeMenu.classList.remove("highlight");
-    aboutMenu.classList.remove("highlight");
-    return
-  } else if (window.innerWidth > 1100 && scrollPos < 4000) {
-    aboutMenu.classList.add("highlight");
-    workMenu.classList.remove("highlight");
-    return
-  }
 
-  if((elem && window.innerWidth < 1100 && scrollPos < 600) || elem) {
-    elem.classList.remove("highlight");
-  }
+//highlight menu when scrolling
+var aboutAnchor = $("#about-anchor").offset().top;
+var heightAnchor = $("#about-anchor").outerHeight();
+
+if($(window).width() > 992) {
+  $(window).scroll(function() {
+    if($(window).scrollTop() > (aboutAnchor)) {
+      $("#about-page").addClass("highlight");
+      $("#work-page").removeClass("highlight");
+    }
+    else {
+      $("#work-page").addClass("highlight");
+      $("#about-page").removeClass("highlight");
+    }
+  })
+}
+//hightlight work by default
+if($(window).width() > 992) {
+  $(function() {
+    $("#work-page").addClass("highlight")
+  })
 }
 
-window.addEventListener("scroll", highlightMenu);
-window.addEventListener("click", highlightMenu);
+//highlight menu when clicking on menu
+$(function() {                       //run when the DOM is ready
+  $(".clickable").click(function() {  //use a class, since your ID gets mangled
+    $(this).addClass("active");      //add the class to the clicked element
+  });
+});
+
+
+//Show navbar when scrolling
+var $navLogo = $(".navbar, .navbar__container, #navbar__logo, .navbar__toggle");
+var $navMenu = $(".navbar__links, .navbar__item, .navbar__menu");
+
+
+$(document).scroll(colorNavbar)
+
+function colorNavbar() {
+  $navLogo.toggleClass('background-col', $(this).scrollTop() > $(".navbar").height());
+  $navMenu.toggleClass('background-col', $(this).scrollTop() > $(".navbar").height());
+}
+/*
+if($(window).width() > 992) {
+  $(function () {
+    $(document).scroll(function () {
+      
+      $navLogo.toggleClass('background-col', $(this).scrollTop() > $(".navbar").height());
+      $navMenu.toggleClass('background-col', $(this).scrollTop() > $(".navbar").height());
+    });
+  });
+} 
+*/
+
+/*
+if($(window).width() <= 992) {
+  $(function () {
+    $navLogo.addClass("background-col");
+    $navMenu.addClass("background-col");
+  });
+}
+*/
+
+
+
 
 // Close mobile menu when clicking on menu item
 const hideMobileMenu = () => {
@@ -58,8 +91,9 @@ menuLinks.addEventListener("click", hideMobileMenu);
 navLogo.addEventListener("click", hideMobileMenu);
 
 
-//adds highlight class to work filters
+//adds highlight class to projects filters
 //default highlights all
+$('#all').addClass("highlight");
 $('.filter-active').click(function() {
     $(this).addClass('highlight');
 
