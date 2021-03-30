@@ -1172,7 +1172,7 @@ hr {
 /* SVG COMPUTER */
 
 #wheel-1, #wheel-2, #wheel-3, #wheel-4, #wheel-5, #wheel-6, #wheel-7{
-  animation: wheel 6s infinite linear;
+  animation: wheel 4s infinite linear;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -1183,6 +1183,48 @@ hr {
   }
   to {
     transform: rotateZ(360deg);
+  }
+}
+
+#sheet-2 {
+  transform-origin: 270px;
+  animation: sheet-2 4s infinite linear;
+}
+
+@keyframes sheet-2 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(90deg);
+  }
+}
+
+#sheet-1 {
+  transform-origin: 220px;
+  animation: sheet-1 3s infinite linear;
+}
+
+@keyframes sheet-1 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(120deg);
+  }
+}
+
+#sheet-3 {
+  transform-origin: 220px;
+  animation: sheet-3 5s infinite linear;
+}
+
+@keyframes sheet-3 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(90deg);
   }
 }
 
