@@ -647,7 +647,7 @@ hr {
   }
 
   .work__heading {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .work__heading h1 {
@@ -656,7 +656,7 @@ hr {
 
   .work__heading p {
     margin-bottom: 75px;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .work__filter {
@@ -669,7 +669,7 @@ hr {
 
 
   #filter-list li {
-    font-size: 10px;
+    font-size: 12px;
     padding: 10px 20px;
   }
 
@@ -1092,7 +1092,7 @@ hr {
 
   .main__content p {
     margin-top: 0px;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
     margin-bottom: 15px;
     font-weight: bolder;
