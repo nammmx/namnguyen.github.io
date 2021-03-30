@@ -643,7 +643,7 @@ hr {
 
 @media screen and (max-width: 576px) {
   .work {
-    padding: 75px 0 0 0;
+    padding: 140px 0 0 0;
   }
 
   .work__heading {
@@ -655,7 +655,7 @@ hr {
   }
 
   .work__heading p {
-    margin-bottom: 75px;
+    margin-bottom: 140px;
     font-size: 17px;
   }
 
