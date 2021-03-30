@@ -1166,3 +1166,23 @@ hr {
     padding: 40px 0;
   } 
 }
+
+
+/*#######################################################################################################################################*/
+/* SVG COMPUTER */
+
+#wheel-1, #wheel-2, #wheel-3, #wheel-4, #wheel-5, #wheel-6, #wheel-7{
+  animation: wheel 6s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
