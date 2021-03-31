@@ -21,6 +21,10 @@ hr {
   transition: 0.3s ease;
 }
 
+.highlight {
+  border-bottom: 3px solid #131313;
+}
+
 /*####################################################################################################################################################*/
 /* Nav Bar */
 .navbar {
@@ -314,7 +318,7 @@ hr {
   align-items: center;
   text-align: center;
   font-size: 27px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
   color: #131313;
   max-width: 900px;
 }
@@ -1271,5 +1275,5 @@ hr {
 */
 
 .svg-test {
-  margin-bottom: 75px;
+  margin-bottom: 45px;
 }
