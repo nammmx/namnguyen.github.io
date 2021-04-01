@@ -1514,3 +1514,84 @@ hr {
     opacity: 0;
   }
 }
+
+
+
+/* Social icons #################################################################*/
+#linkedin {
+  animation: linkedin 10s ease infinite;
+}
+@keyframes linkedin {
+  0% {
+    color: #131313;
+  }
+  20% {
+    color:#AC9A7C;
+  }
+  80% {
+    color:#AC9A7C;
+  }
+100% {
+    color:#131313;
+  }
+}
+
+#github {
+  animation: github 10s ease infinite;
+}
+@keyframes github {
+  0% {
+    color: #131313;
+  }
+  20% {
+    color:#131313;
+  }
+  40% {
+    color:#AC9A7C;
+  }
+  80% {
+    color:#AC9A7C;
+  }
+  100% {
+    color: #131313;
+  }
+}
+
+#kaggle {
+  animation: kaggle 10s ease infinite;
+}
+@keyframes kaggle {
+  0% {
+    color: #131313;
+  }
+  40% {
+    color: #131313;
+  }
+  60% {
+    color: #AC9A7C;
+  }
+  80% {
+    color: #AC9A7C;
+  }
+  100% {
+    color: #131313;
+  }
+}
+
+#tableau {
+  animation: tableau 10s ease infinite;
+}
+@keyframes tableau {
+  0% {
+    color: #131313;
+  }
+  60% {
+    color:#131313;
+  }
+  80% {
+    color:#AC9A7C;
+  }
+  100% {
+    color:#131313;
+  }
+}
