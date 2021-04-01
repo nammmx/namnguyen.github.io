@@ -16,7 +16,7 @@ menu.addEventListener("click", mobileMenu);
 var aboutAnchor = $("#about-anchor").offset().top;
 var heightAnchor = $("#about-anchor").outerHeight();
 
-if($(window).width() > 992) {
+if($(window).width() > 993) {
   $(window).scroll(function() {
     if($(window).scrollTop() > (aboutAnchor)) {
       $("#about-page").addClass("highlight");
@@ -29,7 +29,7 @@ if($(window).width() > 992) {
   })
 }
 //hightlight work by default
-if($(window).width() > 992) {
+if($(window).width() > 993) {
   $(function() {
     $("#work-page").addClass("highlight")
   })
