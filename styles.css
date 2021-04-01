@@ -305,6 +305,11 @@ hr {
 
 
 /*####################################################################################################################################################*/
+/*SVG*/
+.svg-test {
+  margin-bottom: 25px;
+}
+
 /* Work Section */
 .work {
   background: white;
@@ -469,8 +474,12 @@ hr {
 
 
 @media screen and (max-width: 992px) {
+  .svg-test {
+    height: auto;
+  }
+
   .work {
-    padding: 140px 0 0 0;
+    padding: 0 0 0 0;
   }
 
   .projects {
@@ -483,11 +492,7 @@ hr {
   }
 
   .work__heading h1 {
-    margin-bottom: 40px;
-  }
-
-  .work__heading p {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
 
   #filter-list li {
@@ -521,17 +526,20 @@ hr {
 
 /* 768 TABLETS*/
 @media screen and (max-width: 768px) {
-  .work {
-    padding: 90px 0 0 0;
-  }
 
   .work__heading {
     font-size: 22px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
-  .work__heading h1 {
-    margin-bottom: 35px;
+  .work__headers {
+    padding: 0 30px 0 0;
   }
+
 
   .work__filter {
     background: #AC9A7C;
@@ -579,22 +587,27 @@ hr {
   }
 }
 
+@media screen and (max-width: 694px) {
+  .work__heading h1 {
+    margin: 0 0 10px 0;
+  }
+}
 
 @media screen and (max-width: 576px) {
-  .work {
-    padding: 140px 0 0 0;
-  }
-
   .work__heading {
     font-size: 18px;
   }
 
   .work__heading h1 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+
+  .work__headers {
+    padding: 0;
   }
 
   .work__heading p {
-    margin-bottom: 140px;
+    margin-bottom: 10px;
     font-size: 17px;
   }
 
@@ -647,6 +660,10 @@ hr {
 
 
 /*####################################################################################################################################################*/
+/* SVG */
+.svg__environment {
+  padding: 0 0 100px 50px;
+}
 /* About Section */
 .main {
   background-color: white;
@@ -795,10 +812,16 @@ hr {
 
 
 /* Mobile Responsive */
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1199px) {
+
+  .svg__environment {
+    padding: 0;
+    height: auto;
+  }
+
   .main__container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -806,20 +829,11 @@ hr {
   }
 
 
-  .main__img--container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .main__img--card {
-    height: 500px;
-    width: 500px;
-  }
 
   .main__content {
     text-align: center;
     padding: 0 150px;
-    margin-top: 40px;
+    margin-top: 0;
   }
   
   .main__content h1 {
@@ -860,8 +874,8 @@ hr {
   }
 
   .main__container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -873,7 +887,7 @@ hr {
   }
 
   .main__heading h1 {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 
   .main__img--container {
@@ -889,18 +903,18 @@ hr {
   .main__content {
     text-align: center;
     padding: 0 45px;
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .main__content h1 {
-    font-size: 36px;
+    font-size: 28px;
     margin-top: 2rem;
   }
 
 
   .main__content p {
     font-size: 19px;
-    max-height: 80rem;
+    /*max-height: 80rem;*/
     line-height: 40px;
     text-align: justify;
     text-justify: inter-word;
@@ -915,32 +929,39 @@ hr {
 
 
   .social__heading h1 {
-    padding: 90px 0 50px 0;
+    padding: 50px 0 50px 0;
     margin-bottom: 10px;
   }
 
 }
 
 
-
-
 @media screen and (max-width:768px) {
+  .svg__environment {
+    margin: 0 0 0 0;
+    padding: 0 25px;
+  }
+
   .main {
     padding: 75px 0 0 0;
   }
+
 
   .main__heading h1 {
     font-size: 33px;
     margin-bottom: 0;
   }
 
-  .main__img--card {
-    width: 450px;
-    height: 450px;
+
+  .main__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .main__content {
     padding: 0 66px;
+    margin: 0 auto;
   }
 
   .main__content h1 {
@@ -965,7 +986,7 @@ hr {
   }
 
   .social__heading h1 {
-    padding: 65px 0 30px 0;
+    padding: 0 0 35px 0;
     margin-bottom: 0px;
     font-size: 18px;
   }
@@ -992,8 +1013,12 @@ hr {
 }
 
 
-
 @media screen and (max-width:576px) {
+  .svg__environment {
+    height: auto;
+    margin-top: 10px;
+  }
+
   .main {
     padding: 55px 0 0 0;
   }
@@ -1007,15 +1032,6 @@ hr {
     font-size: 27px;
   }
 
-  .main__img--card {
-    width: 300px;
-    height: 300px;
-  }
-
-  .main__img--card img {
-    width: 300px;
-    height: 300px;
-  }
 
 
   .main__content {
@@ -1044,7 +1060,7 @@ hr {
   }
 
   .social__heading h1 {
-    padding: 65px 0 30px 0;
+    padding: 20px 0 40px 0;
     margin-bottom: 0px;
     font-size: 18px;
   }
@@ -1106,14 +1122,7 @@ hr {
 }
 
 /*#####################################################################################################################################################################*/
-/* SVG */
-.svg-test {
-  margin-bottom: 25px;
-}
 
-.svg__environment {
-  padding: 0 0 100px 50px;
-}
 
 /*#######################################################################################################################################*/
 /* SVG COMPUTER */
