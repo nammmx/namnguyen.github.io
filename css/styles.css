@@ -1599,12 +1599,6 @@ hr {
 
 /*SUB PAGES ####################################################################################################################################################*/
 
-.tableau {
-  margin: 1px auto;
-  display: flex;
-  justify-content: center;
-}
-
 .navbar-pages {
   background: #AC9A7C;
 }
@@ -1641,3 +1635,20 @@ hr {
 .navbar__item-pages a {
   background: #AC9A7C;
 }
+
+.tableau {
+  margin: 1px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width:450px) {
+  .emissions-desktop {
+    display: none;
+  }
+
+}
+
+
