@@ -1636,19 +1636,9 @@ hr {
   background: #AC9A7C;
 }
 
-.tableau {
-  margin: 1px auto;
+/*CO2 EMISSIONS####################################*/
+.tableau__emissions {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
-
-
-@media screen and (max-width:450px) {
-  .emissions-desktop {
-    display: none;
-  }
-
-}
-
 
