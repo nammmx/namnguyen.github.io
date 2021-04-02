@@ -1598,43 +1598,33 @@ hr {
 
 
 /*SUB PAGES ####################################################################################################################################################*/
-
-.navbar-pages {
-  background: #AC9A7C;
+.navbar-subpages {
+  background: white;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: 5px 0 0 20px;
 }
 
-.navbar__container-pages {
-  background: #AC9A7C;
+.navbar__container-subpages {
+  background: white;
 }
 
-.navbar__container-pages a {
+.navbar__logo-subpages {
   background: #AC9A7C;
+  color: #131313;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding:  20px 20px;
 }
 
-#navbar__logo-pages {
-  background: #AC9A7C;
-}
-
-#navbar__logo-pages a {
-  background: #AC9A7C;
-}
-
-.navbar__toggle-pages {
-  background: #AC9A7C;
-}
-
-.navbar__menu-pages {
-  background: #AC9A7C;
-}
-
-.navbar__links-pages {
-  background: #AC9A7C;
-  width: 200px;
-}
-
-.navbar__item-pages a {
-  background: #AC9A7C;
-}
 
 /*CO2 EMISSIONS####################################*/
 .tableau__emissions {
