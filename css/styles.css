@@ -1519,38 +1519,44 @@ hr {
 
 /* Social icons #################################################################*/
 #linkedin {
-  animation: linkedin 10s ease infinite;
+  animation: linkedin 13s ease-in-out infinite;
 }
 @keyframes linkedin {
   0% {
     color: #131313;
   }
-  20% {
+  7.6923% {
     color:#AC9A7C;
   }
-  80% {
+  15.3846% {
     color:#AC9A7C;
   }
-100% {
+  23.0769% {
+    color:#131313;
+  }
+  100% {
     color:#131313;
   }
 }
 
 #github {
-  animation: github 10s ease infinite;
+  animation: github 13s ease-in-out infinite;
 }
 @keyframes github {
   0% {
     color: #131313;
   }
-  20% {
+  23.0769% {
     color:#131313;
   }
-  40% {
+  30.7692% {
     color:#AC9A7C;
   }
-  80% {
+  38.4615% {
     color:#AC9A7C;
+  }
+  46.1538% {
+    color: #131313;;
   }
   100% {
     color: #131313;
@@ -1558,20 +1564,23 @@ hr {
 }
 
 #kaggle {
-  animation: kaggle 10s ease infinite;
+  animation: kaggle 13s ease-in-out infinite;
 }
 @keyframes kaggle {
   0% {
     color: #131313;
   }
-  40% {
+  46.1538% {
     color: #131313;
   }
-  60% {
+  53.84615% {
     color: #AC9A7C;
   }
-  80% {
+  61.53846% {
     color: #AC9A7C;
+  }
+  69.23077% {
+    color: #131313;
   }
   100% {
     color: #131313;
@@ -1579,21 +1588,28 @@ hr {
 }
 
 #tableau {
-  animation: tableau 10s ease infinite;
+  animation: tableau 13s ease-in-out infinite;
 }
 @keyframes tableau {
   0% {
     color: #131313;
   }
-  60% {
+  69.23077% {
     color:#131313;
   }
-  80% {
+  76.923077% {
     color:#AC9A7C;
   }
-  100% {
-    color:#131313;
+  84.6154% {
+    color:#AC9A7C;
   }
+  92.3077% {
+    color: #131313;
+  }
+  100% {
+    color: #131313;
+  }
+
 }
 
 
