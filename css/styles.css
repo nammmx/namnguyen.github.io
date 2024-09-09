@@ -858,7 +858,6 @@ hr {
 
   .social__heading {
     font-size: 12px;
-    margin-bottom: 50px;
   }
 
   .social__heading h1 {
@@ -872,6 +871,10 @@ hr {
   .main__btn {
     margin: 5rem 0.5rem 3rem 0.5rem;
   }
+
+  .main__heading {
+    margin-bottom: 50px;
+}
 
 }
 
