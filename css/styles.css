@@ -680,7 +680,6 @@ hr {
 .main__heading {
   text-align: center;
   font-size: 18.5px;
-  margin-bottom: 50px;
   color: rgb(60, 35, 127);
 }
 
@@ -859,6 +858,7 @@ hr {
 
   .social__heading {
     font-size: 12px;
+    margin-bottom: 50px;
   }
 
   .social__heading h1 {
@@ -892,6 +892,7 @@ hr {
 
   .main__heading {
     font-size: 18px;
+
   }
 
   .main__heading h1 {
