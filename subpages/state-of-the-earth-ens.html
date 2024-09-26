@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State of the Earth: Environmental News Daily</title>
+    <link rel="stylesheet" href="../css/styles_subpages.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <nav class="navbar-subpages" id="navbar">
+      <div class="navbar__container-subpages">
+        <a href="../index.html#top" id="navbar__logo-subpages"><i class="fa-solid fa-circle-arrow-left"></i></a>
+        <div class="navbar__toggle-subpages" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu-subpages">
+          <li class="navbar__item-subpages">
+            <a href="../index.html#top" class="navbar__links-subpages" id="work-page">Home</a>
+          </li>
+          <li class="navbar__item-subpages">
+            <a href="../index.html#about-anchor" class="navbar__links-subpages" id="about-page">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="page-background">
+        <article id="10c9e1ab-1c8e-803c-a7b6-f7eae616fc10" class="sans">
+            <div class="header-background">
+                <header class="page">
+                    <h1 class="page-title">State of the Earth</h1>
+                    <h1 class="page-title">Environmental News Daily</h1>
+                </header>
+            </div>
+            <div class="page-body">
+                <div class="page-table">
+                    <div class="page">
+                        <h1 class="block-color-teal">Table of Contents</h1>
+                        <div class="page-table-ol">
+                            <ol type="1" id="10c9e1ab-1c8e-80eb-8e8d-c7352311060a" class="numbered-list" start="1">
+                                <li><a href="#introduction">Introduction</a></li>
+                                <li><a href="#key-features">Key Features</a></li>
+                                <li><a href="#technology-stack">Technology Stack</a></li>
+                                <li><a href="#workflow">Workflow</a></li>
+                                <li><a href="#deployment">Deployment</a></li>
+                                <li><a href="#acknowledgements">Acknowledgements</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="shapedividers_com-4997"><br><br><br><br></div>
+                <div class="page-introduction">
+                    <div class="page">
+                        <h1 id="introduction" class="block-color-teal">Introduction</h1>
+                        <div>
+                            <div>Environmental News Daily is an innovative news aggregation platform designed to automatically collect, process, and analyze environmental news articles from multiple sources. It produces summarized insights, categorized topics, and visual media based on each article, leveraging cutting-edge AI technologies and serverless architecture.</div>
+                        </div>
+                        <h2>Project Goals</h2>
+                        <ul class="bulleted-list">
+                            <li>Automate ingestion of real-time environmental news articles</li>
+                            <li>Apply machine learning models for summarization and topic generation</li>
+                            <li>Enhance articles with AI-generated images</li>
+                            <li>Prepare processed data for analytics in a Redshift data warehouse</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shapedividers_com-6852"><br><br><br><br><br></div>
+                
+                <div class="page-features">
+                    <div class="page">
+                        <h1 id="key-features" class="block-color-teal">Key Features</h1>
+                        <ul class="bulleted-list">
+                            <li><strong>Automated News Scraping:</strong> Periodically scrapes environmental articles from various RSS feeds</li>
+                            <li><strong>AI-Powered Summarization and Topic Generation:</strong> Utilizes OpenAI's GPT and Hugging Face's BART models</li>
+                            <li><strong>AI-Generated Images:</strong> Creates visual representations of article summaries</li>
+                            <li><strong>Redshift Integration:</strong> Enables analytical querying and reporting</li>
+                            <li><strong>Serverless Architecture:</strong> Leverages AWS Lambda, S3, and Redshift for scalability</li>
+                            <li><strong>Event-Triggered Pipeline:</strong> Ensures efficient and automated workflow</li>
+                            <li><strong>Streamlit Application:</strong> Provides user-friendly interface for manual control and monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shapedividers_com-4997"><br><br><br><br><br></div>
+                <div class="page-technology">
+                    <div class="page">
+                        <h1 id="technology-stack" class="block-color-teal">Technology Stack</h1>
+                        <div class="column-list">
+                            <div class="column">
+                                <h2>AWS Services</h2>
+                                <ul class="bulleted-list">
+                                    <li>AWS Lambda</li>
+                                    <li>Amazon S3</li>
+                                    <li>Amazon Redshift</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h2>AI Models</h2>
+                                <ul class="bulleted-list">
+                                    <li>OpenAI GPT</li>
+                                    <li>Hugging Face BART</li>
+                                    <li>Stability AI</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h2>Other Technologies</h2>
+                                <ul class="bulleted-list">
+                                    <li>Streamlit</li>
+                                    <li>Docker</li>
+                                    <li>Cloudinary</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shapedividers_com-6852"><br><br><br><br><br></div>
+
+                <div class="page-workflow">
+                    <div class="page">
+                        <h1 id="workflow" class="block-color-teal">Workflow</h1>
+                        <div>This project operates as a multi-step data pipeline, ingesting environmental news articles, processing them with AI tools, and uploading them to AWS Redshift for analytical purposes.</div>
+                        <h2>Workflow Summary</h2>
+                        <ul class="bulleted-list">
+                            <li><strong>Lambda 1:</strong> Scrapes news articles → stores raw CSV in 1_raw/ folder</li>
+                            <li><strong>Lambda 2:</strong> Summarizes and categorizes articles → stores summarized CSV in 2_summarized_with_topics/</li>
+                            <li><strong>Lambda 3:</strong> Generates images based on summaries → stores CSV with image links in 3.1_generated_images/</li>
+                            <li><strong>Lambda 4:</strong> Inserts data into Redshift</li>
+                        </ul>
+                        <h2>Detailed Workflow</h2>
+                        <h3>Lambda Function 1: Scraping News Articles</h3>
+                        <ul class="bulleted-list">
+                            <li><strong>Purpose:</strong> Periodically scrape environmental news articles from various RSS feeds and store the raw content in a structured format (CSV) in S3.</li>
+                            <li><strong>Input:</strong> Scheduled trigger, RSS feeds</li>
+                            <li><strong>Process:</strong> Scrape articles, structure data into CSV</li>
+                            <li><strong>Output:</strong> Raw CSV in 1_raw/ S3 folder</li>
+                        </ul>
+                        <h3>Lambda Function 2: Summarize Articles and Generate Topics</h3>
+                        <ul class="bulleted-list">
+                            <li><strong>Purpose:</strong> Process raw articles, summarize content, and classify into predefined topics using AI models.</li>
+                            <li><strong>Input:</strong> Raw CSV from 1_raw/ S3 folder</li>
+                            <li><strong>Process:</strong> Summarize with BART, generate topics with GPT</li>
+                            <li><strong>Output:</strong> Summarized CSV in 2_summarized_with_topics/ S3 folder</li>
+                        </ul>
+                        <h3>Lambda Function 3: Generate Images</h3>
+                        <ul class="bulleted-list">
+                            <li><strong>Purpose:</strong> Create images that visually represent the article summaries using AI-based image generation.</li>
+                            <li><strong>Input:</strong> Summarized CSV from 2_summarized_with_topics/ S3 folder</li>
+                            <li><strong>Process:</strong> Generate images based on summaries and topics</li>
+                            <li><strong>Output:</strong> CSV with image links in 3.1_generated_images/ S3 folder</li>
+                        </ul>
+                        <h3>Lambda Function 4: Insert Data into Redshift</h3>
+                        <ul class="bulleted-list">
+                            <li><strong>Purpose:</strong> Insert processed data into AWS Redshift data warehouse for analysis.</li>
+                            <li><strong>Input:</strong> CSV from 3.1_generated_images/ S3 folder</li>
+                            <li><strong>Process:</strong> Generate and execute SQL COPY command</li>
+                            <li><strong>Output:</strong> Data loaded into Redshift table</li>
+                        </ul>
+                        <h3>Streamlit Application: Manual Workflow Control</h3>
+                        <ul class="bulleted-list">
+                            <li><strong>Purpose:</strong> Provide user interface for manual triggering and monitoring of pipeline steps.</li>
+                            <li><strong>Features:</strong> CSV upload, Lambda function triggering, data review, file download</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="shapedividers_com-4997"><br><br><br><br><br></div>
+                <div class="page-deployment">
+                    <div class="page">
+                        <h1 id="deployment" class="block-color-teal">Deployment</h1>
+                        <div>The deployment leverages AWS's serverless architecture and automated services for maximum scalability and cost-efficiency.</div>
+                        <h2>AWS Lambda Functions</h2>
+                        <ul class="bulleted-list">
+                            <li><strong>lambda_1_scrapeNewsArticles:</strong> Scheduled trigger</li>
+                            <li><strong>lambda_2_summarizeAndGenerateTopics:</strong> Triggered by S3 upload to 1_raw/</li>
+                            <li><strong>lambda_3_generateImages:</strong> Triggered by S3 upload to 2_summarized_with_topics/</li>
+                            <li><strong>lambda_4_insertRedshift:</strong> Triggered by S3 upload to 3.1_generated_images/</li>
+                        </ul>
+                        <h2>VPC Configuration</h2>
+                        <p>All Lambda functions are deployed inside a VPC for secure access to Redshift and S3 resources.</p>
+                    </div>
+                </div>
+                <div class="shapedividers_com-6852"><br><br><br><br><br></div>
+
+                <div class="page-acknowledgements">
+                    <div class="page">
+                        <h1 id="acknowledgements" class="block-color-teal">Acknowledgements</h1>
+                        <ul class="bulleted-list">
+                            <li><a href="https://huggingface.co/">Hugging Face</a> for the BART model used in summarization</li>
+                            <li><a href="https://openai.com/">OpenAI GPT</a> for topic generation</li>
+                            <li><a href="https://aws.amazon.com/">AWS Lambda, S3, and Redshift</a> for seamless serverless architecture</li>
+                            <li><a href="https://streamlit.io/">Streamlit</a> for providing a simple yet effective UI for managing the pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+      <!-- Footer Section -->
+    <div class="footer" id="footer">
+        <div class="footer__container">
+        <p id="copy-email">nam.ngh97@gmail.com <br><br></p> 
+        <p>&#169; 2024 Hai Nam Nguyen</p>
+        </div>
+    </div>
+    <script src="../app.js"></script>
+</body>
+</html>

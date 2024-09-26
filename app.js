@@ -1,14 +1,28 @@
 const menu = document.querySelector("#mobile-menu");
-const menuLinks = document.querySelector(".navbar__menu");
-const navLogo = document.querySelector("#navbar__logo");
+const menuLinks = document.querySelector(".navbar__menu, .navbar__menu-subpages");
+const navLogo = document.querySelector("#navbar__logo, #navbar__logo-subpages");
 
 // Display Mobile Menu
 const mobileMenu = () => {
   menu.classList.toggle("is-active");
   menuLinks.classList.toggle("active");
-}
+};
 
 menu.addEventListener("click", mobileMenu);
+
+// Close mobile menu when clicking on menu item
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector(".is-active");
+  if (window.innerWidth <= 992 && menuBars) {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.remove("active");
+  }
+};
+
+menuLinks.addEventListener("click", hideMobileMenu);
+navLogo.addEventListener("click", hideMobileMenu);
+
+// The rest of your JavaScript code...
 
 
 
@@ -72,21 +86,6 @@ if($(window).width() <= 992) {
 */
 
 
-
-
-// Close mobile menu when clicking on menu item
-const hideMobileMenu = () => {
-  const menuBars = document.querySelector(".is-active")
-  if(window.innerWidth <= 1100 && menuBars) {
-    menu.classList.toggle("is-active");
-    menuLinks.classList.remove("active");
-  }
-}
-
-menuLinks.addEventListener("click", hideMobileMenu);
-navLogo.addEventListener("click", hideMobileMenu);
-
-
 //adds highlight class to projects filters
 //default highlights all
 $('#all').addClass("highlight");
@@ -120,5 +119,11 @@ function copyToClipboard(element) {
   $temp.remove();
 }
 
-//hover mobile
-
+//smoothe scolling
+document.querySelectorAll('.numbered-list a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    document.querySelector(targetId).scrollIntoView();
+  });
+});
