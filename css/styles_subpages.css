@@ -26,7 +26,12 @@ body {
 .page {
     margin: 0em auto;
     max-width: 800px;
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0 3rem 0;
+}
+
+.page-streamlit {
+    margin: 0 2rem;
+    padding: 2rem 2rem 3rem 2rem;
 }
 
 .page-introduction .page {
@@ -48,7 +53,7 @@ body {
 }
 
 .sans {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .header-background {
@@ -166,6 +171,20 @@ h3 {
 
 .page-acknowledgements {
     background: white;
+}
+
+.page-preview {
+    background: rgb(60, 35, 127);
+}
+
+.page-preview h1 {
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.page-preview h2 {
+    color: #27B873;
 }
 
 strong {
