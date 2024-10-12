@@ -29,9 +29,16 @@ body {
     padding: 2rem 0 3rem 0;
 }
 
-.page-streamlit {
-    margin: 0 2rem;
-    padding: 2rem 2rem 3rem 2rem;
+.page-website {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.page-website a,
+.page-website a:visited {
+    color: white;
 }
 
 .page-introduction .page {
@@ -52,15 +59,25 @@ body {
     padding-top: 0.75rem;
 }
 
-.sans {
-    margin-bottom: 4rem;
-}
-
-.header-background {
+/* .header-background {
     background: white;
     background: url('/pictures/hero.jpg') no-repeat center center/cover;
     padding: 11rem 0;
     transition: background 2s ease-in-out;
+} */
+    .header-background {
+    /* background-color: #E5E4E4; */
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 25px 0;
+    /* border-bottom: 2px solid rgb(55, 53, 47); */
+    /* border-bottom: 2px solid #3A237F; */
+} 
+
+header a {
+    text-decoration: none;
 }
 
 /* Typography */
@@ -91,22 +108,32 @@ h3 {
     font-weight: 400;
 }
 
-.page-title {
+/* .page-title {
     font-size: 5.5rem;
     font-weight: 700;
     margin-bottom: 0.5em;
     text-align: center;
     line-height: 7rem;
     color: rgb(36, 75, 73);
+} */
+
+.page-title {
+    font-family: "Gravitas One", serif;
+    font-weight: 100;
+    font-size: 8rem;
+    margin: 0;
+    padding-bottom: 15px;
+    cursor: pointer;
+    color: #333;
 }
 
-.page-title:nth-of-type(2) {
+/* .page-title:nth-of-type(2) {
     font-size: 3.75rem;
 }
 
 .page-title:nth-of-type(1) {
     margin-top: 0;
-}
+} */
 
 .page-table {
     background: white;
@@ -193,8 +220,8 @@ strong {
 
 /* Links */
 a, a:visited {
-    color: inherit;
     text-decoration: underline;
+    color: rgb(55, 53, 47);
 }
 
 /* Lists */
@@ -421,6 +448,10 @@ a, a:visited {
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .page-title {
+        font-size: 6rem;
+    }
 }
 
 /* Responsive styles */
@@ -502,16 +533,25 @@ a, a:visited {
     #mobile-menu {
         top: 29%;
     }
+
+    .page-title {
+        font-size: 4rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .page-title {
-        font-size: 3.75rem;
+        font-size: 2.75rem;
         line-height: 4.5rem;
+        padding: 0 20px;
     }
     
     .page-title:nth-of-type(2) {
         font-size: 2.75rem;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
 

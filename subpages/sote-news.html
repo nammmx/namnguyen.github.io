@@ -6,6 +6,7 @@
     <title>State of the Earth: Environmental News Daily</title>
     <link rel="stylesheet" href="../css/styles_subpages.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Rozha+One&display=swap" rel="stylesheet">
 </head>
 </head>
 <body>
@@ -28,11 +29,10 @@
       </div>
     </nav>
     <section class="page-background">
-        <article id="10c9e1ab-1c8e-803c-a7b6-f7eae616fc10" class="sans">
+        <article id="10c9e1ab-1c8e-803c-a7b6-f7eae616fc10">
             <div class="header-background">
-                <header class="page">
-                    <h1 class="page-title">State of the Earth</h1>
-                    <h1 class="page-title">Environmental News Daily</h1>
+                <header>
+                    <a href="https://www.sote-news.com/" target="_blank"><h1 class="page-title">sote news</h1></a>
                 </header>
             </div>
             <div class="page-body">
@@ -57,14 +57,16 @@
                     <div class="page">
                         <h1 id="introduction" class="block-color-teal">Introduction</h1>
                         <div>
-                            <div>Environmental News Daily is an innovative news aggregation platform designed to automatically collect, process, and analyze environmental news articles from multiple sources. It produces summarized insights, categorized topics, and visual media based on each article, leveraging cutting-edge AI technologies and serverless architecture.</div>
+                            <div>State of the Earth (sote) News is an innovative news aggregation platform designed to automatically collect, process, and analyze environmental news articles from multiple sources. It produces summarized insights, categorized topics, and visual media based on each article, leveraging AI technologies and serverless architecture. <br>
+                            In the face of growing environmental concerns, staying informed about the planet’s condition is crucial. By quickly providing concise, curated information on environmental topics, this platform empowers users to stay informed on vital issues without requiring extensive time investments.
+                            </div>
                         </div>
                         <h2>Project Goals</h2>
                         <ul class="bulleted-list">
-                            <li>Automate ingestion of real-time environmental news articles</li>
-                            <li>Apply machine learning models for summarization and topic generation</li>
-                            <li>Enhance articles with AI-generated images</li>
-                            <li>Prepare processed data for analytics in a Redshift data warehouse</li>
+                            <li><strong>Automate ingestion of environmental news articles:</strong> Set up a fully automated pipeline to continuously collect and ingest news articles from various environmental sources.</li>
+                            <li><strong>Apply machine learning models for summarization and topic generation:</strong> Use machine learning models to generate concise summaries and automatically classify articles by relevant topics.</li>
+                            <li><strong>Enhance articles with AI-generated images:</strong> Add AI-generated images to each article to visually represent key themes and engage readers.</li>
+                            <li><strong>Prepare processed data for analytics in a Redshift data warehouse:</strong> Organize the processed data within a Redshift data warehouse to enable efficient analytics and reporting.</li>
                         </ul>
                     </div>
                 </div>
@@ -75,12 +77,11 @@
                         <h1 id="key-features" class="block-color-teal">Key Features</h1>
                         <ul class="bulleted-list">
                             <li><strong>Automated News Scraping:</strong> Periodically scrapes environmental articles from various RSS feeds</li>
-                            <li><strong>AI-Powered Summarization and Topic Generation:</strong> Utilizes OpenAI's GPT and Hugging Face's BART models</li>
-                            <li><strong>AI-Generated Images:</strong> Creates visual representations of article summaries</li>
+                            <li><strong>AI-Powered Summarization and Topic Generation:</strong> Utilizes OpenAI's GPT and Hugging Face's BART models to generate summaries and topics.</li>
+                            <li><strong>AI-Generated Images:</strong> Utilizes Stability AI's Stable Diffusion model to create visual representations of article summaries</li>
                             <li><strong>Redshift Integration:</strong> Enables analytical querying and reporting</li>
                             <li><strong>Serverless Architecture:</strong> Leverages AWS Lambda, S3, and Redshift for scalability</li>
-                            <li><strong>Event-Triggered Pipeline:</strong> Ensures efficient and automated workflow</li>
-                            <li><strong>Streamlit Application:</strong> Provides user-friendly interface for manual control and monitoring</li>
+                            <li><strong>Event-Triggered Pipeline:</strong> Maintains an efficient and automated workflow with event-based triggers.</li>
                         </ul>
                     </div>
                 </div>
@@ -93,8 +94,9 @@
                                 <h2>AWS Services</h2>
                                 <ul class="bulleted-list">
                                     <li>AWS Lambda</li>
-                                    <li>Amazon S3</li>
-                                    <li>Amazon Redshift</li>
+                                    <li>AWS S3</li>
+                                    <li>AWS Redshift</li>
+                                    <li>AWS Lightsail</li>
                                 </ul>
                             </div>
                             <div class="column">
@@ -102,7 +104,7 @@
                                 <ul class="bulleted-list">
                                     <li>OpenAI GPT</li>
                                     <li>Hugging Face BART</li>
-                                    <li>Stability AI</li>
+                                    <li>Stability AI Stable Diffusion</li>
                                 </ul>
                             </div>
                             <div class="column">
@@ -111,6 +113,7 @@
                                     <li>Streamlit</li>
                                     <li>Docker</li>
                                     <li>Cloudinary</li>
+                                    <li>Flask</li>
                                 </ul>
                             </div>
                         </div>
@@ -124,9 +127,9 @@
                         <div>This project operates as a multi-step data pipeline, ingesting environmental news articles, processing them with AI tools, and uploading them to AWS Redshift for analytical purposes.</div>
                         <h2>Workflow Summary</h2>
                         <ul class="bulleted-list">
-                            <li><strong>Lambda 1:</strong> Scrapes news articles → stores raw CSV in 1_raw/ folder</li>
+                            <li><strong>Lambda 1:</strong> Scrapes news articles from RSS feeds → stores raw CSV in 1_raw/ folder</li>
                             <li><strong>Lambda 2:</strong> Summarizes and categorizes articles → stores summarized CSV in 2_summarized_with_topics/</li>
-                            <li><strong>Lambda 3:</strong> Generates images based on summaries → stores CSV with image links in 3.1_generated_images/</li>
+                            <li><strong>Lambda 3:</strong> Generates images based on summaries → stores CSV with image links in 3_generated_images/</li>
                             <li><strong>Lambda 4:</strong> Inserts data into Redshift</li>
                         </ul>
                         <h2>Detailed Workflow</h2>
@@ -148,8 +151,8 @@
                         <ul class="bulleted-list">
                             <li><strong>Purpose:</strong> Create images that visually represent the article summaries using AI-based image generation.</li>
                             <li><strong>Input:</strong> Summarized CSV from 2_summarized_with_topics/ S3 folder</li>
-                            <li><strong>Process:</strong> Generate images based on summaries and topics</li>
-                            <li><strong>Output:</strong> CSV with image links in 3.1_generated_images/ S3 folder</li>
+                            <li><strong>Process:</strong> Generate images based on summaries and titles</li>
+                            <li><strong>Output:</strong> CSV with image links in 3_generated_images/ S3 folder</li>
                         </ul>
                         <h3>Lambda Function 4: Insert Data into Redshift</h3>
                         <ul class="bulleted-list">
@@ -170,7 +173,6 @@
                 <div class="page-deployment">
                     <div class="page">
                         <h1 id="deployment" class="block-color-teal">Deployment</h1>
-                        <div>The deployment leverages AWS's serverless architecture and automated services for maximum scalability and cost-efficiency.</div>
                         <h2>AWS Lambda Functions</h2>
                         <ul class="bulleted-list">
                             <li><strong>lambda_1_scrapeNewsArticles:</strong> Scheduled trigger</li>
@@ -178,8 +180,15 @@
                             <li><strong>lambda_3_generateImages:</strong> Triggered by S3 upload to 2_summarized_with_topics/</li>
                             <li><strong>lambda_4_insertRedshift:</strong> Triggered by S3 upload to 3.1_generated_images/</li>
                         </ul>
+                        <h2>AWS Lightsail Hosting</h2>
+                        <ul class="bulleted-list">
+                            <li><strong>Flask App Deployment:</strong> The Flask application is deployed to AWS Lightsail for reliable and scalable hosting.</li>
+                        </ul>
                         <h2>VPC Configuration</h2>
-                        <p>All Lambda functions are deployed inside a VPC for secure access to Redshift and S3 resources.</p>
+                        <ul class="bulleted-list">
+                            <li><strong>Secure AWS Services:</strong> All AWS services reside within a VPC and are not publicly accessible.</li>
+                            <li><strong>Lightsail VPC Peering:</strong> The Lightsail instance resides in a separate VPC and communicates securely with Redshift via VPC peering.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="shapedividers_com-6852"><br><br><br><br><br></div>
@@ -191,6 +200,7 @@
                             <li><a href="https://huggingface.co/">Hugging Face</a> for the BART model used in summarization</li>
                             <li><a href="https://openai.com/">OpenAI GPT</a> for topic generation</li>
                             <li><a href="https://aws.amazon.com/">AWS Lambda, S3, and Redshift</a> for seamless serverless architecture</li>
+                            <li><a href="https://stability.ai/">Stability AI</a> for image generation</li>
                             <li><a href="https://streamlit.io/">Streamlit</a> for providing a simple yet effective UI for managing the pipeline</li>
                         </ul>
                     </div>
@@ -200,8 +210,9 @@
                     <div class="page">
                         <h1 id="preview" class="block-color-teal">App Preview</h1>
                     </div>
-                    <div page-streamlit>
-                        <iframe src="https://environmental-news.streamlit.app/?embed=true" style="height: 90vh; width: 100%; border: none;"></iframe>
+                    <div class="page-website">
+                        <a class="app" href="https://www.sote-news.com/" target="_blank">Link to App</a>
+                        <iframe src="https://www.sote-news.com/?embed=true" style="height: 100vh; width: 90%; border: none;"></iframe>
                     </div>
                 </div>
             </div>
